@@ -174,9 +174,9 @@ export default function Header() {
         </Link>
 
         <div className="flex items-center gap-3">
-          <button type="button" aria-label="Search">
+          {/* <button type="button" aria-label="Search">
             <SearchIcon className="h-8 w-8" />
-          </button>
+          </button> */}
           <Link href="/cart" aria-label="Open cart">
             <CartIcon className="h-8 w-8" />
           </Link>
