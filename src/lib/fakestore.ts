@@ -24,20 +24,37 @@ const API_URL = "https://fakestoreapi.com/products";
 
 //   return (await response.json()) as FakeStoreProduct[];
 // }
+// export async function getAllProducts(): Promise<FakeStoreProduct[]> {
+//   try {
+//     const response = await fetch(API_URL, {
+//       next: { revalidate: 300 },
+//     });
+
+//     if (!response.ok) {
+//       console.error("API failed");
+//       return []; // ✅ prevent crash
+//     }
+
+//     return await response.json();
+//   } catch (error) {
+//     console.error("Fetch error:", error);
+//     return []; // ✅ fallback
+//   }
+// }
 export async function getAllProducts(): Promise<FakeStoreProduct[]> {
   try {
     const response = await fetch(API_URL, {
-      next: { revalidate: 300 },
+      cache: "no-store", // ✅ IMPORTANT
     });
 
     if (!response.ok) {
       console.error("API failed");
-      return []; // ✅ prevent crash
+      return [];
     }
 
     return await response.json();
   } catch (error) {
     console.error("Fetch error:", error);
-    return []; // ✅ fallback
+    return [];
   }
 }
