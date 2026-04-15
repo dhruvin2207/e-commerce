@@ -23,28 +23,14 @@ const stats = [
 export default function Hero() {
   return (
     <section className="overflow-hidden bg-[#f2f0f1]">
-      <div className="mx-auto grid w-full max-w-[1240px] grid-cols-1 lg:grid-cols-2">
-        <div className="px-3 pb-8 pt-10 sm:px-6 lg:px-6 lg:pb-12 lg:pt-16">
-          <h1 className="hidden max-w-[590px] text-[64px] leading-[0.94] font-extrabold tracking-[-0.03em] lg:block">
+      <div className="mx-auto grid w-full max-w-[1240px] grid-cols-1 md:grid-cols-2">
+        <div className="px-3 pb-8 pt-10 sm:px-6 flex flex-col max-md:items-center items-start justify-center lg:px-6 lg:pb-12 lg:pt-16">
+          <h1 className="max-w-[330px] text-[44px] leading-[0.95] font-extrabold tracking-[-0.03em] lg:max-w-[590px] lg:text-[64px] lg:leading-[0.94]">
             FIND CLOTHES
             <br />
             THAT MATCHES
             <br />
             YOUR STYLE
-          </h1>
-
-          <h1 className="max-w-[330px] text-[44px] leading-[0.95] font-extrabold tracking-[-0.03em] lg:hidden">
-            <span className="relative inline-block after:absolute after:bottom-[0.10em] after:left-0 after:h-[0.12em] after:w-full after:bg-[#4ea5ff] after:content-['']">
-              FIND CLOTHES
-            </span>
-            <br />
-            <span className="relative inline-block after:absolute after:bottom-[0.10em] after:left-0 after:h-[0.12em] after:w-full after:bg-[#4ea5ff] after:content-['']">
-              THAT MATCHES
-            </span>
-            <br />
-            <span className="relative inline-block after:absolute after:bottom-[0.10em] after:left-0 after:h-[0.12em] after:w-full after:bg-[#4ea5ff] after:content-['']">
-              YOUR STYLE
-            </span>
           </h1>
 
           <p className="mt-5 max-w-[560px] text-sm leading-6 text-black/55 lg:text-base">
